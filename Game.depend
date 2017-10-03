@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1507021557 source:c:\users\student\documents\cpp\game\main.cpp
+	"CChar.h"
+	"CSkill.h"
+	"CStat.h"
+
+1507021990 c:\users\student\documents\cpp\game\include\cchar.h
+	"../stale.h"
+	"CBonus.h"
+	"CStat.h"
+	<string>
+
+1507020719 source:c:\users\student\documents\cpp\game\src\cbonus.cpp
+	"CBonus.h"
+
+1507021971 c:\users\student\documents\cpp\game\include\cbonus.h
+	"../stale.h"
+	<string>
+
+1507021344 source:c:\users\student\documents\cpp\game\src\cchar.cpp
+	"CChar.h"
+
+1507021942 c:\users\student\documents\cpp\game\include\cskill.h
+	"../stale.h"
+	<string>
+	"CBonus.h"
+
+1507021906 c:\users\student\documents\cpp\game\include\cstat.h
+	"../stale.h"
+	<string>
+
+1507019883 source:c:\users\student\documents\cpp\game\src\cskill.cpp
+	"CSkill.h"
+
+1507020280 source:c:\users\student\documents\cpp\game\src\cstat.cpp
+	"CStat.h"
+
+1507021862 c:\users\student\documents\cpp\game\stale.h
+

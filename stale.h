@@ -7,4 +7,6 @@
 
 #define MAX_SPOT_ITEMS 1000
 
+#define MAX_SKILLS 20
+
 #endif // STALE_H_INCLUDED

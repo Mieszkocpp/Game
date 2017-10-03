@@ -1,3 +1,5 @@
+#include <iostream>
+
 using namespace std;
 
 #include "CChar.h"
@@ -11,4 +13,10 @@ using namespace std;
 int main()
 {
 
+for(;;)
+{
+
+
+
+}
 }

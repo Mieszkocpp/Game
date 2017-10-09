@@ -22,7 +22,7 @@ class CChar
 
 
 public:
-        int get_stats();
+        int get_stat(ST st);
         int skill_tree(int m_exp);
         void chose_spel(int chose);
         void show_items();

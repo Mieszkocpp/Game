@@ -9,8 +9,9 @@
 
 class CMobs
 {
-    CSkill m_Mspells[MAX_SKILLS];
-    CStat m_MStats[MAX_STATS];
+    CSkill m_tSpells[MAX_SKILLS];
+    CStat m_tStats[MAX_STATS];
+    CBonus m_tBonuses[MAX_STATS];
 
     public:
         int set_stats();

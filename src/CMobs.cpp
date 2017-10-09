@@ -2,10 +2,10 @@
 
 CMobs::CMobs()
 {
-    //ctor
+    //ct
 }
 
 CMobs::~CMobs()
 {
-    //dtor
+
 }

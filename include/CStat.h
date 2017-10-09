@@ -12,6 +12,10 @@ class CStat
     long m_value;
     public:
         CStat();
+        long get()
+        {
+            return m_value;
+        }
         virtual ~CStat();
 
     protected:

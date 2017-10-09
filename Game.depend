@@ -37,3 +37,53 @@
 
 1507021862 c:\users\student\documents\cpp\game\stale.h
 
+1506993242 source:c:\documents and settings\uczen\pulpit\game-master\main.cpp
+	<iostream>
+	"CChar.h"
+	"CSkill.h"
+	"CStat.h"
+
+1507546415 c:\documents and settings\uczen\pulpit\game-master\include\cchar.h
+	"../stale.h"
+	"CBonus.h"
+	"CSkill.h"
+	"CStat.h"
+	<string>
+
+1507549452 c:\documents and settings\uczen\pulpit\game-master\stale.h
+
+1506993242 c:\documents and settings\uczen\pulpit\game-master\include\cbonus.h
+	"../stale.h"
+	<string>
+
+1506993242 c:\documents and settings\uczen\pulpit\game-master\include\cskill.h
+	"../stale.h"
+	<string>
+	"CBonus.h"
+
+1507546482 c:\documents and settings\uczen\pulpit\game-master\include\cstat.h
+	"../stale.h"
+	<string>
+
+1506993242 source:c:\documents and settings\uczen\pulpit\game-master\src\cbonus.cpp
+	"CBonus.h"
+
+1506993242 source:c:\documents and settings\uczen\pulpit\game-master\src\cchar.cpp
+	"CChar.h"
+
+1506993242 source:c:\documents and settings\uczen\pulpit\game-master\src\cmobs.cpp
+	"CMobs.h"
+
+1506993242 c:\documents and settings\uczen\pulpit\game-master\include\cmobs.h
+	"../stale.h"
+	"CBonus.h"
+	"CSkill.h"
+	"CStat.h"
+	<string>
+
+1506993242 source:c:\documents and settings\uczen\pulpit\game-master\src\cskill.cpp
+	"CSkill.h"
+
+1506993242 source:c:\documents and settings\uczen\pulpit\game-master\src\cstat.cpp
+	"CStat.h"
+

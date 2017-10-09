@@ -1,13 +1,18 @@
 #include "CChar.h"
 
-void chose_spel(int chose)
+void CChar::chose_spel(int chose)
 {
 
 }
 
+int CChar::get_stat(ST st)
+{
+    return m_stat[st].get();
+}
+
 CChar::CChar()
 {
-    //ctor
+    get_stat(st_int);
 }
 
 CChar::~CChar()

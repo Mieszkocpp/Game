@@ -9,3 +9,4 @@ CStat::~CStat()
 {
     //dtor
 }
+

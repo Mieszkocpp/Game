@@ -5,11 +5,20 @@ enum ST
 {
     st_str,
     st_int,
-    st_gold //....
+    st_hp,
+    st_mp,
+    st_arm,
+    st_res,
+    st_mdgm,
+    st_pdmg,
+    st_speed,
+    st_gold
 };
 
+#define MAX_STATS 10
+
 #define MAX_ITMES 100
-#define MAX_STATS 7
+
 
 #define MAX_DROPITEM 11
 

@@ -2,33 +2,36 @@
 #define CCHAR_H
 
 #include "../stale.h"
-#include "CBonus.h"
 #include "CSkill.h"
-#include "CStat.h"
+#include "CObject.h"
 #include <string>
 
 using namespace std;
 
-class CChar
+class CChar : public CObject
 {
-    string m_name;
-    string m_race;
 
+    string m_race;
     unsigned long m_exp;
 
 
-    CStat m_stat[MAX_STATS];
-    CSkill m_spels[MAX_SKILLS];
+
+
+    //    CSkill m_spels[MAX_SKILLS];
 
 
 public:
-        int get_stat(ST st);
+
+
+
+    /*    int get_stat(ST st);
         int skill_tree(int m_exp);
         void chose_spel(int chose);
         void show_items();
         int drop_item();
-        int pick_item();
-        CChar();
+        int pick_item();*/
+
+        CChar(string name, string race);
         virtual ~CChar();
 
     protected:

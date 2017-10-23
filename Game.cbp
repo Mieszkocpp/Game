@@ -37,12 +37,14 @@
 		<Unit filename="include/CBonus.h" />
 		<Unit filename="include/CChar.h" />
 		<Unit filename="include/CMobs.h" />
+		<Unit filename="include/CObject.h" />
 		<Unit filename="include/CSkill.h" />
 		<Unit filename="include/CStat.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/CBonus.cpp" />
 		<Unit filename="src/CChar.cpp" />
 		<Unit filename="src/CMobs.cpp" />
+		<Unit filename="src/CObject.cpp" />
 		<Unit filename="src/CSkill.cpp" />
 		<Unit filename="src/CStat.cpp" />
 		<Unit filename="stale.h" />

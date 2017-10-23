@@ -1,18 +1,15 @@
 #include "CChar.h"
-
+/*
 void CChar::chose_spel(int chose)
 {
 
-}
+}*/
 
-int CChar::get_stat(ST st)
-{
-    return m_stat[st].get();
-}
 
-CChar::CChar()
+CChar::CChar(string name, string race)
 {
-    get_stat(st_int);
+    m_name = name;
+    m_race = race;
 }
 
 CChar::~CChar()

@@ -8,19 +8,18 @@ using namespace std;
 
 class CStat
 {
-    string m_name;
     long m_value;
     public:
-        CStat();
         long get()
         {
             return m_value;
         }
+        void set(long newVal)
+        {
+            m_value = newVal;
+        }
+        CStat();
         virtual ~CStat();
-
-    protected:
-
-    private:
 };
 
 #endif // CSTAT_H

@@ -2,7 +2,7 @@
 #define CMOBS_H
 
 #include "../stale.h"
-#include "CBonus.h"
+#include "CObject"
 #include "CSkill.h"
 #include "CStat.h"
 #include <string>
@@ -17,7 +17,7 @@ class CMobs
         int set_stats();
         int use_spell();
         int use_atatck();
-        CMobs();
+        CMobs(string name);
         virtual ~CMobs();
 
     protected:

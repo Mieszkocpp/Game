@@ -1,8 +1,9 @@
 #include "CMobs.h"
 
-CMobs::CMobs()
+
+CMobs::CMobs(string name)
 {
-    //ct
+    m_name = name;
 }
 
 CMobs::~CMobs()

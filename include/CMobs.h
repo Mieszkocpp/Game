@@ -4,11 +4,11 @@
 #include "../stale.h"
 #include "CObject"
 #include "CSkill.h"
-#include "CStat.h"
 #include <string>
 
-class CMobs
+class CMobs : public CObject
 {
+    
     CSkill m_tSpells[MAX_SKILLS];
     CStat m_tStats[MAX_STATS];
     CBonus m_tBonuses[MAX_STATS];
@@ -17,7 +17,7 @@ class CMobs
         int set_stats();
         int use_spell();
         int use_atatck();
-        CMobs(string name);
+        CMobs(string name,string race);
         virtual ~CMobs();
 
     protected:

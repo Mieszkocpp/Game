@@ -36,14 +36,16 @@
 		</Compiler>
 		<Unit filename="include/CBonus.h" />
 		<Unit filename="include/CChar.h" />
-		<Unit filename="include/CMobs.h" />
+		<Unit filename="include/CItem.h" />
+		<Unit filename="include/CMob.h" />
 		<Unit filename="include/CObject.h" />
 		<Unit filename="include/CSkill.h" />
 		<Unit filename="include/CStat.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/CBonus.cpp" />
 		<Unit filename="src/CChar.cpp" />
-		<Unit filename="src/CMobs.cpp" />
+		<Unit filename="src/CItem.cpp" />
+		<Unit filename="src/CMob.cpp" />
 		<Unit filename="src/CObject.cpp" />
 		<Unit filename="src/CSkill.cpp" />
 		<Unit filename="src/CStat.cpp" />

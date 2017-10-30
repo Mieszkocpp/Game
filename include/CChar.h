@@ -11,13 +11,8 @@ using namespace std;
 class CChar : public CObject
 {
 
-    string m_race;
     unsigned long m_exp;
 
-
-
-
-    //    CSkill m_spels[MAX_SKILLS];
 
 
 public:
@@ -31,7 +26,7 @@ public:
         int drop_item();
         int pick_item();*/
 
-        CChar(string name, string race);
+        CChar(string name, string type);
         virtual ~CChar();
 
     protected:

@@ -6,10 +6,10 @@ void CChar::chose_spel(int chose)
 }*/
 
 
-CChar::CChar(string name, string race)
+CChar::CChar(string name, string type)
 {
     m_name = name;
-    m_race = race;
+    m_type = type;
 }
 
 CChar::~CChar()

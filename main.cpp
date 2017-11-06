@@ -1,6 +1,5 @@
 #include <iostream>
 
-using namespace std;
 
 #include "CChar.h"
 #include "CMob.h"
@@ -8,26 +7,41 @@ using namespace std;
 
 #define MAX_ITEMS 100
 
+#include <string.h>
+#include <stdio.h>
+#include <fstream>
+#include <vector>
+#include "rapidxml.hpp"
 
-int main()
+using namespace rapidxml;
+using namespace std;
+
+int main(void)
 {
-    CChar* player1= new CChar("Janek","Krasnolud");
-    CMob* mob1 = new CMob("Karol","Ork");
+	xml_document<> doc;
+	xml_node<> * root;
 
-    mob1->setBonus(st_str,1.3);
-    mob1->setBonus(st_int,0.5);
-    mob1->setBonus(st_hp,2.3);
-    mob1->setBonus(st_mp,.3);
+	ifstream klasyXML ("klasy.xml");
+	vector<char> buffer((istreambuf_iterator<char>(klasyXML)), istreambuf_iterator<char>());
+	buffer.push_back('\0');
+	doc.parse<0>(&buffer[0]);
+	root = doc.first_node("char");
 
-    mob1->setStat(st_str,10);
-    mob1->setStat(st_int,5);
-    mob1->setStat(st_hp,100);
-    mob1->setStat(st_mp,50);
+	for (xml_node<> * klasa = root->first_node("class"); klasa; klasa = klasa->next_sibling())
+	{
+	    cout<<"Klasa: "<<klasa->first_attribute("name")->value()<<endl;
+	    if(klasa->first_node("str") && klasa->first_node("str")->first_attribute("value"))
+            cout << klasa->first_node("str")->first_attribute("value")->value()<<endl;;
 
-    mob1->showObject();
+        if(klasa->first_node("int") && klasa->first_node("int")->first_attribute("value"))
+            cout << klasa->first_node("int")->first_attribute("value")->value()<<endl;;
 
-    CItem* ite1 = new CItem("Miecz","2-dsw");
-
-    ite1->showObject();
+	    /*for(xml_node<> * stat = klasa->first_node("stat"); stat; stat = stat->next_sibling())
+	    {
+	        if(stat && stat->first_attribute("name")) cout<<stat->first_attribute("name")->value()<<": ";
+            if(stat && stat->first_attribute("value")) cout<<stat->first_attribute("value")->value();
+            cout << endl;
+	    }*/
+	}
 
 }

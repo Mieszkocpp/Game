@@ -37,6 +37,7 @@ class CObject
         int setName(string name)
         {
             m_name = name;
+            return 0;
         }
         string getName()
         {
@@ -45,6 +46,7 @@ class CObject
         int setType(string type)
         {
             m_type = type;
+            return 0;
         }
         string getType()
         {

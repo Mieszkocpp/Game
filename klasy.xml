@@ -1,0 +1,13 @@
+<char>
+	<class name="ork">
+		<str value="500" />
+		<int value="100" />		
+		
+		
+	</class>
+	<class name="elf">
+		<str value="120" />
+		<int value="430" />
+		
+	</class>
+</char>

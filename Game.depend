@@ -37,11 +37,16 @@
 
 1507021862 c:\users\student\documents\cpp\game\stale.h
 
-1509364574 source:c:\documents and settings\uczen\pulpit\game-master\main.cpp
+1509971365 source:c:\documents and settings\uczen\pulpit\game-master\main.cpp
 	<iostream>
 	"CChar.h"
 	"CMob.h"
 	"CItem.h"
+	<string.h>
+	<stdio.h>
+	<fstream>
+	<vector>
+	"rapidxml.hpp"
 
 1509365611 c:\documents and settings\uczen\pulpit\game-master\include\cchar.h
 	"../stale.h"
@@ -85,7 +90,7 @@
 1509334152 source:c:\documents and settings\uczen\pulpit\game-master\src\cstat.cpp
 	"CStat.h"
 
-1509363924 c:\documents and settings\uczen\pulpit\game-master\include\cobject.h
+1509968658 c:\documents and settings\uczen\pulpit\game-master\include\cobject.h
 	"../stale.h"
 	"CStat.h"
 	"CBonus.h"
@@ -118,4 +123,16 @@
 
 1509364313 source:c:\documents and settings\uczen\pulpit\game-master\src\cmob.cpp
 	"CMob.h"
+
+1242171978 c:\documents and settings\uczen\pulpit\game-master\rapidxml-1.13\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1242171978 c:\documents and settings\uczen\pulpit\game-master\include\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
 

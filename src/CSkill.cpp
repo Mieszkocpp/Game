@@ -2,7 +2,7 @@
 
 CSkill::CSkill()
 {
-    //ctor
+
 }
 
 CSkill::~CSkill()

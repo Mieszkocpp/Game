@@ -136,3 +136,80 @@
 	<new>
 	<exception>
 
+1510872947 source:c:\users\parys\desktop\game-master\main.cpp
+	<iostream>
+	"CChar.h"
+	"CMob.h"
+	"CItem.h"
+	<string.h>
+	<stdio.h>
+	<fstream>
+	<vector>
+	"rapidxml.hpp"
+
+1509971666 c:\users\parys\desktop\game-master\include\cchar.h
+	"../stale.h"
+	"CSkill.h"
+	"CObject.h"
+	<string>
+
+1509971666 c:\users\parys\desktop\game-master\stale.h
+
+1510872108 c:\users\parys\desktop\game-master\include\cskill.h
+	"../stale.h"
+	"CObject.h"
+	<string>
+	"CBonus.h"
+
+1509971666 c:\users\parys\desktop\game-master\include\cbonus.h
+	"../stale.h"
+	<string>
+
+1509971666 c:\users\parys\desktop\game-master\include\cobject.h
+	"../stale.h"
+	"CStat.h"
+	"CBonus.h"
+	<iostream>
+
+1509971666 c:\users\parys\desktop\game-master\include\cstat.h
+	"../stale.h"
+	<string>
+
+1509971666 c:\users\parys\desktop\game-master\include\cmob.h
+	"../stale.h"
+	"CObject.h"
+	"CSkill.h"
+	<string>
+
+1509971666 c:\users\parys\desktop\game-master\include\citem.h
+	<string>
+	"../stale.h"
+	"CObject.h"
+
+1509971666 c:\users\parys\desktop\game-master\include\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1509971666 source:c:\users\parys\desktop\game-master\src\cbonus.cpp
+	"CBonus.h"
+
+1509971666 source:c:\users\parys\desktop\game-master\src\cchar.cpp
+	"CChar.h"
+
+1510872121 source:c:\users\parys\desktop\game-master\src\cskill.cpp
+	"CSkill.h"
+
+1509971666 source:c:\users\parys\desktop\game-master\src\cstat.cpp
+	"CStat.h"
+
+1509971666 source:c:\users\parys\desktop\game-master\src\citem.cpp
+	"CItem.h"
+
+1509971666 source:c:\users\parys\desktop\game-master\src\cmob.cpp
+	"CMob.h"
+
+1509971666 source:c:\users\parys\desktop\game-master\src\cobject.cpp
+	"CObject.h"
+

@@ -1,13 +1,98 @@
 <char>
-	<class name="ork">
-		<str value="500" />
-		<int value="100" />		
-		
-		
+	<class name="Ork">
+		<arm value="5" />
+		<gold value="250" />
+		<hp value="120" />			
+		<int value="10" />
+		<mdgm value="1" />
+		<mp value="50" />
+		<pdmg value="4" />
+		<res value="0" />
+		<speed value="2" />
+		<str value="200" />
 	</class>
-	<class name="elf">
-		<str value="120" />
-		<int value="430" />
-		
+	<class name="Elf">
+		<arm value="1" />
+		<gold value="250" />
+		<hp value="70" />			
+		<int value="150" />
+		<mdgm value="5" />
+		<mp value="130" />
+		<pdmg value="1" />
+		<res value="3" />
+		<speed value="10" />
+		<str value="20" />>
+	</class>
+	<class name="Dwarf">
+		<arm value="10" />
+		<gold value="750" />
+		<hp value="300" />			
+		<int value="1" />
+		<mdgm value="1" />
+		<mp value="20" />
+		<pdmg value="4" />
+		<res value="0" />
+		<speed value="1" />
+		<str value="200" />
+	</class>
+	<class name="Human">
+		<arm value="2" />
+		<gold value="250" />
+		<hp value="100" />			
+		<int value="50" />
+		<mdgm value="3" />
+		<mp value="50" />
+		<pdmg value="3" />
+		<res value="2" />
+		<speed value="4" />
+		<str value="50" />
+	</class>
+	<class name="Forsaken">
+		<arm value="1" />
+		<gold value="25" />
+		<hp value="50" />			
+		<int value="100" />
+		<mdgm value="10" />
+		<mp value="100" />
+		<pdmg value="10" />
+		<res value="3" />
+		<speed value="1" />
+		<str value="20" />
+	</class>
+	<class name="Goblin">
+		<arm value="1" />
+		<gold value="500" />
+		<hp value="30" />			
+		<int value="30" />
+		<mdgm value="1" />
+		<mp value="30" />
+		<pdmg value="10" />
+		<res value="2" />
+		<speed value="5" />
+		<str value="10" />
+	</class>
+	<class name="Sauron's son">
+		<arm value="20" />
+		<gold value="2000" />
+		<hp value="750" />			
+		<int value="3500" />
+		<mdgm value="200" />
+		<mp value="1500" />
+		<pdmg value="2" />
+		<res value="700" />
+		<speed value="50" />
+		<str value="2" />
+	</class>
+	<class name="Ent">
+		<arm value="50" />
+		<gold value="20" />
+		<hp value="2000" />			
+		<int value="500" />
+		<mdgm value="70" />
+		<mp value="500" />
+		<pdmg value="5" />
+		<res value="300" />
+		<speed value="2" />
+		<str value="250" />
 	</class>
 </char>

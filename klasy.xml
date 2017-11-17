@@ -1,5 +1,5 @@
 <char>
-	<class name="Ork">
+	<class name="1 - Ork">
 		<arm value="5" />
 		<gold value="250" />
 		<hp value="120" />			
@@ -11,7 +11,7 @@
 		<speed value="2" />
 		<str value="200" />
 	</class>
-	<class name="Elf">
+	<class name="2 - Elf">
 		<arm value="1" />
 		<gold value="250" />
 		<hp value="70" />			
@@ -21,9 +21,9 @@
 		<pdmg value="1" />
 		<res value="3" />
 		<speed value="10" />
-		<str value="20" />>
+		<str value="20" />
 	</class>
-	<class name="Dwarf">
+	<class name="3 - Dwarf">
 		<arm value="10" />
 		<gold value="750" />
 		<hp value="300" />			
@@ -35,7 +35,7 @@
 		<speed value="1" />
 		<str value="200" />
 	</class>
-	<class name="Human">
+	<class name="4 - Human">
 		<arm value="2" />
 		<gold value="250" />
 		<hp value="100" />			
@@ -47,7 +47,7 @@
 		<speed value="4" />
 		<str value="50" />
 	</class>
-	<class name="Forsaken">
+	<class name="5 - Undead">
 		<arm value="1" />
 		<gold value="25" />
 		<hp value="50" />			
@@ -59,7 +59,7 @@
 		<speed value="1" />
 		<str value="20" />
 	</class>
-	<class name="Goblin">
+	<class name="6 - Goblin">
 		<arm value="1" />
 		<gold value="500" />
 		<hp value="30" />			
@@ -71,7 +71,7 @@
 		<speed value="5" />
 		<str value="10" />
 	</class>
-	<class name="Sauron's son">
+	<class name="7 - Sauron's son">
 		<arm value="20" />
 		<gold value="2000" />
 		<hp value="750" />			
@@ -83,7 +83,7 @@
 		<speed value="50" />
 		<str value="2" />
 	</class>
-	<class name="Ent">
+	<class name="8 - Ent">
 		<arm value="50" />
 		<gold value="20" />
 		<hp value="2000" />			

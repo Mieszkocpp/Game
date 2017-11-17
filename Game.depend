@@ -136,7 +136,7 @@
 	<new>
 	<exception>
 
-1510872947 source:c:\users\parys\desktop\game-master\main.cpp
+1510956658 source:c:\users\parys\desktop\game-master\main.cpp
 	<iostream>
 	"CChar.h"
 	"CMob.h"
@@ -147,7 +147,7 @@
 	<vector>
 	"rapidxml.hpp"
 
-1509971666 c:\users\parys\desktop\game-master\include\cchar.h
+1510954224 c:\users\parys\desktop\game-master\include\cchar.h
 	"../stale.h"
 	"CSkill.h"
 	"CObject.h"
@@ -155,11 +155,9 @@
 
 1509971666 c:\users\parys\desktop\game-master\stale.h
 
-1510872108 c:\users\parys\desktop\game-master\include\cskill.h
+1510941046 c:\users\parys\desktop\game-master\include\cskill.h
 	"../stale.h"
-	"CObject.h"
 	<string>
-	"CBonus.h"
 
 1509971666 c:\users\parys\desktop\game-master\include\cbonus.h
 	"../stale.h"
@@ -181,7 +179,7 @@
 	"CSkill.h"
 	<string>
 
-1509971666 c:\users\parys\desktop\game-master\include\citem.h
+1510954147 c:\users\parys\desktop\game-master\include\citem.h
 	<string>
 	"../stale.h"
 	"CObject.h"
@@ -198,10 +196,10 @@
 1509971666 source:c:\users\parys\desktop\game-master\src\cchar.cpp
 	"CChar.h"
 
-1510872121 source:c:\users\parys\desktop\game-master\src\cskill.cpp
+1510954879 source:c:\users\parys\desktop\game-master\src\cskill.cpp
 	"CSkill.h"
 
-1509971666 source:c:\users\parys\desktop\game-master\src\cstat.cpp
+1510940877 source:c:\users\parys\desktop\game-master\src\cstat.cpp
 	"CStat.h"
 
 1509971666 source:c:\users\parys\desktop\game-master\src\citem.cpp

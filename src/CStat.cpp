@@ -2,7 +2,7 @@
 
 CStat::CStat()
 {
-    //ctor
+
 }
 
 CStat::~CStat()

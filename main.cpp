@@ -19,7 +19,13 @@ using namespace std;
 
 int main(void)
 {
+
     int wybor;
+
+    string name;
+	cout<<"Set your name and choose race: ";
+	cin>>name;
+
 	xml_document<> doc;
 	xml_node<> * root;
 
@@ -30,50 +36,54 @@ int main(void)
 	doc.parse<0>(&buffer[0]);
 	root = doc.first_node("char");
 
+
 	for (xml_node<> * klasa = root->first_node("class"); klasa; klasa = klasa->next_sibling())
 	{
-	    cout<<"Klasa: "<<klasa->first_attribute("name")->value()<<endl;
-	     cout<<endl;
+       cout<<"Races: "<<klasa->first_attribute("name")->value()<<endl;
 	    if(klasa->first_node("arm") && klasa->first_node("arm")->first_attribute("value"))
-            cout <<"arm: "<< klasa->first_node("arm")->first_attribute("value")->value()<<"  ";
+            cout <<"  Armor: "<< klasa->first_node("arm")->first_attribute("value")->value()<<"  ";
 
         if(klasa->first_node("gold") && klasa->first_node("gold")->first_attribute("value"))
-            cout <<"gold: "<<  klasa->first_node("gold")->first_attribute("value")->value()<<"  ";
+            cout <<"  Gold: "<<  klasa->first_node("gold")->first_attribute("value")->value()<<"  ";
 
         if(klasa->first_node("hp") && klasa->first_node("hp")->first_attribute("value"))
-            cout <<"hp: "<<  klasa->first_node("hp")->first_attribute("value")->value()<<"  ";
+            cout <<"  Health: "<<  klasa->first_node("hp")->first_attribute("value")->value()<<"  ";
 
 	    if(klasa->first_node("int") && klasa->first_node("int")->first_attribute("value"))
-            cout <<"int: "<<  klasa->first_node("int")->first_attribute("value")->value()<<"  ";
+            cout <<" Intelligence: "<<  klasa->first_node("int")->first_attribute("value")->value()<<"  ";
 
         if(klasa->first_node("mdgm") && klasa->first_node("mdgm")->first_attribute("value"))
-            cout <<"mdgm: "<<  klasa->first_node("mdgm")->first_attribute("value")->value()<<"  ";
+            cout <<"  Magic dmg: "<<  klasa->first_node("mdgm")->first_attribute("value")->value()<<"  ";
 
         if(klasa->first_node("mp") && klasa->first_node("mp")->first_attribute("value"))
-            cout <<"mp: "<<  klasa->first_node("mp")->first_attribute("value")->value()<<"  ";
+            cout <<"  Magic Points: "<<  klasa->first_node("mp")->first_attribute("value")->value()<<"  ";
 
 	    if(klasa->first_node("pdmg") && klasa->first_node("pdmg")->first_attribute("value"))
-            cout <<"pdmg: "<<  klasa->first_node("pdmg")->first_attribute("value")->value()<<"  ";
+            cout <<"  Physical dmg: "<<  klasa->first_node("pdmg")->first_attribute("value")->value()<<"  ";
 
         if(klasa->first_node("res") && klasa->first_node("res")->first_attribute("value"))
-            cout <<"speed: "<<  klasa->first_node("res")->first_attribute("value")->value()<<"  ";
+            cout <<"   Resistance: "<<  klasa->first_node("res")->first_attribute("value")->value()<<"  ";
 
         if(klasa->first_node("speed") && klasa->first_node("speed")->first_attribute("value"))
-            cout <<"speed: "<<  klasa->first_node("speed")->first_attribute("value")->value()<<"  ";
+            cout <<"   Speed: "<<  klasa->first_node("speed")->first_attribute("value")->value()<<"  ";
 
             if(klasa->first_node("str") && klasa->first_node("str")->first_attribute("value"))
-            cout <<"str: "<<  klasa->first_node("str")->first_attribute("value")->value()<<"  ";
+            cout <<"   Strength: "<<  klasa->first_node("str")->first_attribute("value")->value()<<"  ";
             cout<<endl;
             cout<<endl;
-	    /*for(xml_node<> * stat = klasa->first_node("stat"); stat; stat = stat->next_sibling())
+            cout<<endl;
+            cout<<endl;
+            /*
+	    for(xml_node<> * stat = klasa->first_node("stat"); stat; stat = stat->next_sibling())
 	    {
 	        if(stat && stat->first_attribute("name")) cout<<stat->first_attribute("name")->value()<<": ";
             if(stat && stat->first_attribute("value")) cout<<stat->first_attribute("value")->value();
             cout << endl;
-	    }*/
+	    }
+        */
 	}
-	string name;
-	cin>>name;
+
+
 	cin>>wybor;
 	switch(wybor)
 {
@@ -179,7 +189,7 @@ int main(void)
         }
         case 5:
         {
-        CChar* Play1 = new CChar(name,"Forsaken");
+        CChar* Play1 = new CChar(name,"Undead");
             Play1->setStat(st_arm, 1);
             Play1->setStat(st_gold, 1);
             Play1->setStat(st_hp, 1);
@@ -278,7 +288,6 @@ int main(void)
             break;
         }
 	}
-
 
 
 }

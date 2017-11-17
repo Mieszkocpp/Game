@@ -18,7 +18,7 @@ class CItem : public CObject
 
     protected:
 
-    private:
+
 };
 
 #endif // CITEMS_H

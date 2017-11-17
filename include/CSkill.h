@@ -2,9 +2,7 @@
 #define CSKILL_H
 
 #include "../stale.h"
-#include "CObject.h"
 #include <string>
-#include "CBonus.h"
 
 using namespace std;
 
@@ -12,6 +10,7 @@ class CSkill
 {
 
     public:
+
 
 
         CSkill();

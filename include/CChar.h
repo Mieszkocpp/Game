@@ -31,7 +31,8 @@ public:
 
     protected:
 
-    private:
+
 };
+
 
 #endif // CCHAR_H

@@ -34,7 +34,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/CBonus.h" />
 		<Unit filename="include/CChar.h" />
 		<Unit filename="include/CItem.h" />
 		<Unit filename="include/CMob.h" />
@@ -42,7 +41,9 @@
 		<Unit filename="include/CSkill.h" />
 		<Unit filename="include/CStat.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/CBonus.cpp" />
+		<Unit filename="roadmap">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="src/CChar.cpp" />
 		<Unit filename="src/CItem.cpp" />
 		<Unit filename="src/CMob.cpp" />

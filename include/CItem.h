@@ -9,15 +9,9 @@ using namespace std;
 
 class CItem : public CObject
 {
-    public:
-
-
-
-        CItem(string name,string type);
-        virtual ~CItem();
-
-    protected:
-
+public:
+    CItem(string name,string type);
+    virtual ~CItem();
 
 };
 

@@ -2,23 +2,16 @@
 #define CSKILL_H
 
 #include "../stale.h"
+#include "CObject.h"
 #include <string>
 
 using namespace std;
 
-class CSkill
+class CSkill : public CObject
 {
-
-    public:
-
-
-
-        CSkill();
-        virtual ~CSkill();
-
-    protected:
-
-    private:
+public:
+    CSkill();
+    virtual ~CSkill();
 };
 
 #endif // CSKILL_H

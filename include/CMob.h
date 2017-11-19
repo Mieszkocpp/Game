@@ -8,21 +8,15 @@
 
 class CMob : public CObject
 {
+protected:
+    CSkill  m_Spells   [MAX_SKILLS];
 
-    CSkill m_tSpells[MAX_SKILLS];
-    CStat m_tStats[MAX_STATS];
-    CBonus m_tBonuses[MAX_STATS];
-
-    public:
-        int set_stats();
-        int use_spell();
-        int use_atatck();
-        CMob(string name,string type);
-        virtual ~CMob();
-
-    protected:
-
-    private:
+public:
+    int     set_stats();
+    int     use_spell();
+    int     use_atatck();
+    CMob(string name,string type);
+    virtual ~CMob();
 };
 
 #endif // CMOBS_H

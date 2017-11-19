@@ -12,77 +12,69 @@
 #include <stdio.h>
 #include <fstream>
 #include <vector>
+#include "CChar.h"
 #include "rapidxml.hpp"
 
 using namespace rapidxml;
 using namespace std;
 
+long getXMLValue(xml_node<> *nodeName, string attrName)
+{
+    if(nodeName && nodeName->first_node(attrName.c_str()) && nodeName->first_node(attrName.c_str())->first_attribute("value"))
+        return atol(nodeName->first_node(attrName.c_str())->first_attribute("value")->value());
+    else return 0;
+}
+
 int main(void)
 {
+///loading data
 
-    int wybor;
+    CChar races[100]; ///?????
 
-    string name;
-	cout<<"Set your name and choose race: ";
-	cin>>name;
-
-	xml_document<> doc;
+    xml_document<> doc;
 	xml_node<> * root;
-
-
-	ifstream klasyXML ("klasy.xml");
-	vector<char> buffer((istreambuf_iterator<char>(klasyXML)), istreambuf_iterator<char>());
+    ifstream klasyXML ("klasy.xml");
+    vector<char> buffer((istreambuf_iterator<char>(klasyXML)), istreambuf_iterator<char>());
 	buffer.push_back('\0');
 	doc.parse<0>(&buffer[0]);
 	root = doc.first_node("char");
-
-
-	for (xml_node<> * klasa = root->first_node("class"); klasa; klasa = klasa->next_sibling())
+	int i=0;
+	for (xml_node<> * klasa = root->first_node("class"); klasa; klasa = klasa->next_sibling(),++i)
 	{
-       cout<<"Races: "<<klasa->first_attribute("name")->value()<<endl;
-	    if(klasa->first_node("arm") && klasa->first_node("arm")->first_attribute("value"))
-            cout <<"  Armor: "<< klasa->first_node("arm")->first_attribute("value")->value()<<"  ";
 
-        if(klasa->first_node("gold") && klasa->first_node("gold")->first_attribute("value"))
-            cout <<"  Gold: "<<  klasa->first_node("gold")->first_attribute("value")->value()<<"  ";
+        races[i].setType(klasa->first_attribute("name")->value());
+        races[i].setStat(st_str,getXMLValue(klasa,"str"));
+        races[i].setStat(st_int,getXMLValue(klasa,"int"));
+        races[i].setStat(st_hp,getXMLValue(klasa,"hp"));
+        races[i].setStat(st_mp,getXMLValue(klasa,"mp"));
+        races[i].setStat(st_arm,getXMLValue(klasa,"arm"));
+        races[i].setStat(st_res,getXMLValue(klasa,"res"));
+        races[i].setStat(st_mdgm,getXMLValue(klasa,"mdmg"));
+        races[i].setStat(st_pdmg,getXMLValue(klasa,"pdmg"));
+        races[i].setStat(st_speed,getXMLValue(klasa,"speed"));
+        races[i].setStat(st_gold,getXMLValue(klasa,"gold"));
+        races[i].show();
 
-        if(klasa->first_node("hp") && klasa->first_node("hp")->first_attribute("value"))
-            cout <<"  Health: "<<  klasa->first_node("hp")->first_attribute("value")->value()<<"  ";
-
-	    if(klasa->first_node("int") && klasa->first_node("int")->first_attribute("value"))
-            cout <<" Intelligence: "<<  klasa->first_node("int")->first_attribute("value")->value()<<"  ";
-
-        if(klasa->first_node("mdgm") && klasa->first_node("mdgm")->first_attribute("value"))
-            cout <<"  Magic dmg: "<<  klasa->first_node("mdgm")->first_attribute("value")->value()<<"  ";
-
-        if(klasa->first_node("mp") && klasa->first_node("mp")->first_attribute("value"))
-            cout <<"  Magic Points: "<<  klasa->first_node("mp")->first_attribute("value")->value()<<"  ";
-
-	    if(klasa->first_node("pdmg") && klasa->first_node("pdmg")->first_attribute("value"))
-            cout <<"  Physical dmg: "<<  klasa->first_node("pdmg")->first_attribute("value")->value()<<"  ";
-
-        if(klasa->first_node("res") && klasa->first_node("res")->first_attribute("value"))
-            cout <<"   Resistance: "<<  klasa->first_node("res")->first_attribute("value")->value()<<"  ";
-
-        if(klasa->first_node("speed") && klasa->first_node("speed")->first_attribute("value"))
-            cout <<"   Speed: "<<  klasa->first_node("speed")->first_attribute("value")->value()<<"  ";
-
-            if(klasa->first_node("str") && klasa->first_node("str")->first_attribute("value"))
-            cout <<"   Strength: "<<  klasa->first_node("str")->first_attribute("value")->value()<<"  ";
-            cout<<endl;
-            cout<<endl;
-            cout<<endl;
-            cout<<endl;
-            /*
-	    for(xml_node<> * stat = klasa->first_node("stat"); stat; stat = stat->next_sibling())
-	    {
-	        if(stat && stat->first_attribute("name")) cout<<stat->first_attribute("name")->value()<<": ";
-            if(stat && stat->first_attribute("value")) cout<<stat->first_attribute("value")->value();
-            cout << endl;
-	    }
-        */
 	}
 
+
+    int race;
+
+    string name;
+	cout<<"Select your name and choose race! "<<endl;
+	cout<<"Enter name: ";
+	cin>>name;
+	cout<<"Choose race: ";
+	cin>>race;
+	switch(race)
+	{
+    case 1:
+        {
+            break;
+        }
+	}
+
+/*
 
 	cin>>wybor;
 	switch(wybor)
@@ -288,6 +280,6 @@ int main(void)
             break;
         }
 	}
-
+*/
 
 }

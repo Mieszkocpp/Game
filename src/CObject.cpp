@@ -2,7 +2,9 @@
 
 CObject::CObject()
 {
-    //ctor
+    m_id    = 0;
+    m_name  = "";
+    m_type  = "";
 }
 
 CObject::~CObject()

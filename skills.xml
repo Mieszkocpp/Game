@@ -1,0 +1,14 @@
+<skills>
+	<skill id="0" name="speed" level="1">
+		<speed value="2" />
+	</skill>
+	<skill id="1" name="speed" level="2">
+		<speed value="4" />
+	</skill>
+	<skill id="15" name="health" level="1">
+		<speed value="2" />
+	</skill>
+	<skill id="16" name="health" level="2">
+		<speed value="4" />
+	</skill>
+</skills>

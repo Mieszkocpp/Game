@@ -3,69 +3,46 @@
 
 #include "../stale.h"
 #include "CStat.h"
-#include "CBonus.h"
 #include <iostream>
 using namespace std;
 
 class CObject
 {
-    public:
-        CObject();
-        virtual ~CObject();
+protected:
+     long   m_id;
+     string m_name,
+            m_type;
+     CStat  m_stats     [MAX_STATS];
+     CStat  m_bonuses   [MAX_STATS];
 
-        long getStat(ST st)
-        {
-            return m_stat[st].get();
-        }
+public:
+    CObject();
+    virtual ~CObject();
 
-        long getBonus(ST st)
-        {
-            return m_bonus[st].get();
-        }
+    ///GET
 
-        int setStat(ST stat, long newVal)
-        {
-            m_stat[stat].set(newVal);
-            return 0;
-        }
+    long getStat(ST st)     {return m_stats[st].getValue();}
+    long getBonus(ST st)    {return m_bonuses[st].getValue();}
+    long getId()            {return m_id;}
+    string getName()        {return m_name;}
+    string getType()        {return m_type;}
 
-        int setBonus(ST stat, double newVal)
-        {
-            m_bonus[stat].set(newVal);
-            return 0;
-        }
-        int setName(string name)
-        {
-            m_name = name;
-            return 0;
-        }
-        string getName()
-        {
-            return m_name;
-        }
-        int setType(string type)
-        {
-            m_type = type;
-            return 0;
-        }
-        string getType()
-        {
-            return m_type;
-        }
-        void showObject()
-        {
-            cout<<m_name<<" "<<m_type<<endl;
-            cout<<"Strength: "<<m_stat[st_str].get()<<" "<<m_bonus[st_str].get()<<endl;
-            cout<<"Inteligence: "<<m_stat[st_int].get()<<" "<<m_bonus[st_int].get()<<endl;
-            cout<<"Helth: "<<m_stat[st_hp].get()<<" "<<m_bonus[st_hp].get()<<endl;
-            cout<<"Mana: "<<m_stat[st_mp].get()<<" "<<m_bonus[st_mp].get()<<endl;
-        }
-    protected:
-         string m_name,m_type;
-         CStat m_stat[MAX_STATS];
-         CBonus m_bonus[MAX_STATS];
+    ///SET
+    int setStat(ST stat, long newVal)       {m_stats[stat].setValue(newVal);     return 0;}
+    int setBonus(ST stat, double newVal)    {m_bonuses[stat].setValue(newVal);   return 0;}
+    int setId(long id)                      {m_id=id;       return 0;}
+    int setName(string name)                {m_name = name; return 0;}
+    int setType(string type)                {m_type = type; return 0;}
 
-    private:
+    ///TMP
+    void show()
+    {
+        cout<<m_name<<" "<<m_type<<endl;
+        cout<<"Strength: "<<m_stats[st_str].getValue()<<" "<<m_bonuses[st_str].getValue()<<endl;
+        cout<<"Inteligence: "<<m_stats[st_int].getValue()<<" "<<m_bonuses[st_int].getValue()<<endl;
+        cout<<"Helth: "<<m_stats[st_hp].getValue()<<" "<<m_bonuses[st_hp].getValue()<<endl;
+        cout<<"Mana: "<<m_stats[st_mp].getValue()<<" "<<m_bonuses[st_mp].getValue()<<endl;
+    }
 };
 
 #endif // COBJECT_H

@@ -211,3 +211,216 @@
 1509971666 source:c:\users\parys\desktop\game-master\src\cobject.cpp
 	"CObject.h"
 
+1511046399 source:c:\users\mkowa\desktop\game-kopia\main.cpp
+	<iostream>
+	"CChar.h"
+	"CMob.h"
+	"CItem.h"
+	<string.h>
+	<stdio.h>
+	<fstream>
+	<vector>
+	"rapidxml.hpp"
+
+1511043940 c:\users\mkowa\desktop\game-kopia\include\cchar.h
+	"../stale.h"
+	"CSkill.h"
+	"CObject.h"
+	<string>
+
+1511043940 c:\users\mkowa\desktop\game-kopia\stale.h
+
+1511043940 c:\users\mkowa\desktop\game-kopia\include\cskill.h
+	"../stale.h"
+	<string>
+
+1511051457 c:\users\mkowa\desktop\game-kopia\include\cobject.h
+	"../stale.h"
+	"CStat.h"
+	"CBonus.h"
+	<iostream>
+
+1511043940 c:\users\mkowa\desktop\game-kopia\include\cstat.h
+	"../stale.h"
+	<string>
+
+1511043940 c:\users\mkowa\desktop\game-kopia\include\cbonus.h
+	"../stale.h"
+	<string>
+
+1511043940 c:\users\mkowa\desktop\game-kopia\include\cmob.h
+	"../stale.h"
+	"CObject.h"
+	"CSkill.h"
+	<string>
+
+1511043940 c:\users\mkowa\desktop\game-kopia\include\citem.h
+	<string>
+	"../stale.h"
+	"CObject.h"
+
+1511043940 c:\users\mkowa\desktop\game-kopia\include\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1511043941 source:c:\users\mkowa\desktop\game-kopia\src\cchar.cpp
+	"CChar.h"
+
+1511043941 source:c:\users\mkowa\desktop\game-kopia\src\cskill.cpp
+	"CSkill.h"
+
+1511043941 source:c:\users\mkowa\desktop\game-kopia\src\cstat.cpp
+	"CStat.h"
+
+1511043941 source:c:\users\mkowa\desktop\game-kopia\src\cbonus.cpp
+	"CBonus.h"
+
+1511043941 source:c:\users\mkowa\desktop\game-kopia\src\citem.cpp
+	"CItem.h"
+
+1511043941 source:c:\users\mkowa\desktop\game-kopia\src\cmob.cpp
+	"CMob.h"
+
+1511043941 source:c:\users\mkowa\desktop\game-kopia\src\cobject.cpp
+	"CObject.h"
+
+1511099319 source:d:\marcin\desktop\game-kopia\src\cchar.cpp
+	"CChar.h"
+
+1511099232 d:\marcin\desktop\game-kopia\include\cchar.h
+	"../stale.h"
+	"CSkill.h"
+	"CObject.h"
+	<string>
+
+1511043940 d:\marcin\desktop\game-kopia\stale.h
+
+1511096184 d:\marcin\desktop\game-kopia\include\cskill.h
+	"../stale.h"
+	"CObject.h"
+	<string>
+
+1511099023 d:\marcin\desktop\game-kopia\include\cobject.h
+	"../stale.h"
+	"CStat.h"
+	<iostream>
+
+1511093859 d:\marcin\desktop\game-kopia\include\cstat.h
+	"../stale.h"
+	<string>
+
+1511043941 source:d:\marcin\desktop\game-kopia\src\citem.cpp
+	"CItem.h"
+
+1511094325 d:\marcin\desktop\game-kopia\include\citem.h
+	<string>
+	"../stale.h"
+	"CObject.h"
+
+1511043941 source:d:\marcin\desktop\game-kopia\src\cmob.cpp
+	"CMob.h"
+
+1511094354 d:\marcin\desktop\game-kopia\include\cmob.h
+	"../stale.h"
+	"CObject.h"
+	"CSkill.h"
+	<string>
+
+1511043941 source:d:\marcin\desktop\game-kopia\src\cskill.cpp
+	"CSkill.h"
+
+1511099009 source:d:\marcin\desktop\game-kopia\main.cpp
+	<iostream>
+	"CChar.h"
+	"CMob.h"
+	"CItem.h"
+	<string.h>
+	<stdio.h>
+	<fstream>
+	<vector>
+	"CChar.h"
+	"rapidxml.hpp"
+
+1511043940 d:\marcin\desktop\game-kopia\include\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1511051716 source:d:\marcin\desktop\game-kopia\src\cobject.cpp
+	"CObject.h"
+
+1511093479 source:d:\marcin\desktop\game-kopia\src\cstat.cpp
+	"CStat.h"
+
+1511099010 source:c:\users\parys\desktop\game-kopia\main.cpp
+	<iostream>
+	"CChar.h"
+	"CMob.h"
+	"CItem.h"
+	<string.h>
+	<stdio.h>
+	<fstream>
+	<vector>
+	"CChar.h"
+	"rapidxml.hpp"
+
+1511099234 c:\users\parys\desktop\game-kopia\include\cchar.h
+	"../stale.h"
+	"CSkill.h"
+	"CObject.h"
+	<string>
+
+1511043940 c:\users\parys\desktop\game-kopia\stale.h
+
+1511096186 c:\users\parys\desktop\game-kopia\include\cskill.h
+	"../stale.h"
+	"CObject.h"
+	<string>
+
+1511099024 c:\users\parys\desktop\game-kopia\include\cobject.h
+	"../stale.h"
+	"CStat.h"
+	<iostream>
+
+1511093860 c:\users\parys\desktop\game-kopia\include\cstat.h
+	"../stale.h"
+	<string>
+
+1511094356 c:\users\parys\desktop\game-kopia\include\cmob.h
+	"../stale.h"
+	"CObject.h"
+	"CSkill.h"
+	<string>
+
+1511094326 c:\users\parys\desktop\game-kopia\include\citem.h
+	<string>
+	"../stale.h"
+	"CObject.h"
+
+1511043940 c:\users\parys\desktop\game-kopia\include\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1511099320 source:c:\users\parys\desktop\game-kopia\src\cchar.cpp
+	"CChar.h"
+
+1511043942 source:c:\users\parys\desktop\game-kopia\src\citem.cpp
+	"CItem.h"
+
+1511043942 source:c:\users\parys\desktop\game-kopia\src\cmob.cpp
+	"CMob.h"
+
+1511051716 source:c:\users\parys\desktop\game-kopia\src\cobject.cpp
+	"CObject.h"
+
+1511043942 source:c:\users\parys\desktop\game-kopia\src\cskill.cpp
+	"CSkill.h"
+
+1511093480 source:c:\users\parys\desktop\game-kopia\src\cstat.cpp
+	"CStat.h"
+

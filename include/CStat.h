@@ -8,18 +8,20 @@ using namespace std;
 
 class CStat
 {
-    long m_value;
-    public:
-        long get()
-        {
-            return m_value;
-        }
-        void set(long newVal)
-        {
-            m_value = newVal;
-        }
-        CStat();
-        virtual ~CStat();
+
+protected:
+    string m_name;
+    double m_value;
+
+public:
+    double getValue()           {return m_value;}
+    string getName()            {return m_name;}
+    int setValue(double value)  {m_value = value;   return 0;}
+    int setName(string name)    {m_name = name;     return 0;}
+public:
+
+    CStat();
+    virtual ~CStat();
 };
 
 #endif // CSTAT_H

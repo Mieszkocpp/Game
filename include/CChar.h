@@ -10,27 +10,20 @@ using namespace std;
 
 class CChar : public CObject
 {
-
-    unsigned long m_exp;
-
-
-
+protected:
+    unsigned long   m_exp;
+    /*
+    CItem   m_inv [...]; //itemy ubrane
+    CItem   m_backpack[...]; //itemy w plecaku
+    CItem   m_depo [...]; //itemy w skrzyni
+    */
 public:
+    void show();
 
 
-
-    /*    int get_stat(ST st);
-        int skill_tree(int m_exp);
-        void chose_spel(int chose);
-        void show_items();
-        int drop_item();
-        int pick_item();*/
-
-        CChar(string name, string type);
-        virtual ~CChar();
-
-    protected:
-
+    CChar() {}
+    CChar(string name, string type);
+    virtual ~CChar();
 
 };
 

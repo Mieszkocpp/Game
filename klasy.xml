@@ -1,6 +1,6 @@
 <char>
-	<class name="1 - Ork">
-		<arm value="5" />
+	<class name="Ork" id="1">
+		<arm value="5" multi="1.5"/>
 		<gold value="250" />
 		<hp value="120" />			
 		<int value="10" />
@@ -8,8 +8,8 @@
 		<mp value="50" />
 		<pdmg value="4" />
 		<res value="0" />
-		<speed value="2" />
-		<str value="200" />
+		<speed value="2"/>
+		<str value="200"/>
 	</class>
 	<class name="2 - Elf">
 		<arm value="1" />
@@ -20,7 +20,7 @@
 		<mp value="130" />
 		<pdmg value="1" />
 		<res value="3" />
-		<speed value="10" />
+		<speed value="10" multi="2.5" />
 		<str value="20" />
 	</class>
 	<class name="3 - Dwarf">
@@ -72,7 +72,7 @@
 		<str value="10" />
 	</class>
 	<class name="7 - Sauron's son">
-		<arm value="20" />
+		<arm  value="20" />
 		<gold value="2000" />
 		<hp value="750" />			
 		<int value="3500" />

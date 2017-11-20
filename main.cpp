@@ -18,11 +18,19 @@
 using namespace rapidxml;
 using namespace std;
 
-long getXMLValue(xml_node<> *nodeName, string attrName)
+
+CStat getXMLValue(xml_node<> *nodeName, string subNode)
 {
-    if(nodeName && nodeName->first_node(attrName.c_str()) && nodeName->first_node(attrName.c_str())->first_attribute("value"))
-        return atol(nodeName->first_node(attrName.c_str())->first_attribute("value")->value());
-    else return 0;
+    CStat ret;
+    if(nodeName)
+    {
+            xml_node<> *node = nodeName->first_node(subNode.c_str());
+            if(node && node->first_attribute("value"))
+                ret.setValue(atol(node->first_attribute("value")->value()));
+            if(node && node->first_attribute("multi"))
+                ret.setMulti(atof(node->first_attribute("multi")->value()));
+     }
+    return ret;
 }
 
 int main(void)
@@ -30,6 +38,8 @@ int main(void)
 ///loading data
 
     CChar races[100]; ///?????
+
+    CChar player;
 
     xml_document<> doc;
 	xml_node<> * root;
@@ -54,9 +64,7 @@ int main(void)
         races[i].setStat(st_speed,getXMLValue(klasa,"speed"));
         races[i].setStat(st_gold,getXMLValue(klasa,"gold"));
         races[i].show();
-
 	}
-
 
     int race;
 
@@ -64,222 +72,18 @@ int main(void)
 	cout<<"Select your name and choose race! "<<endl;
 	cout<<"Enter name: ";
 	cin>>name;
-	cout<<"Choose race: ";
-	cin>>race;
-	switch(race)
-	{
-    case 1:
-        {
-            break;
-        }
-	}
+	do
+    {
+        cout<<"Choose race: [0-5]";
+        cin>>race;
+    }
+	while(race < 0 || race > 5);
 
-/*
+	player = races[race];
+	player.setName(name);
 
-	cin>>wybor;
-	switch(wybor)
-{
-    case 1:
-        {
-            CChar* Play1 = new CChar(name,"Ork");
-            Play1->setStat(st_arm, 1);
-            Play1->setStat(st_gold, 1);
-            Play1->setStat(st_hp, 1);
-            Play1->setStat(st_int, 1);
-            Play1->setStat(st_mdgm, 1);
-            Play1->setStat(st_mp, 1);
-            Play1->setStat(st_pdmg, 1);
-            Play1->setStat(st_res, 1);
-            Play1->setStat(st_speed, 1);
-            Play1->setStat(st_str, 1);
-            Play1->setBonus(st_arm, 1);
-            Play1->setBonus(st_gold, 1);
-            Play1->setBonus(st_hp, 1);
-            Play1->setBonus(st_int, 1);
-            Play1->setBonus(st_mdgm, 1);
-            Play1->setBonus(st_mp, 1);
-            Play1->setBonus(st_pdmg, 1);
-            Play1->setBonus(st_res, 1);
-            Play1->setBonus(st_speed, 1);
-            Play1->setBonus(st_str, 1);
-            break;
-        }
-        case 2:
-        {
-            CChar* Play1 = new CChar(name,"Elf");
-            Play1->setStat(st_arm, 1);
-            Play1->setStat(st_gold, 1);
-            Play1->setStat(st_hp, 1);
-            Play1->setStat(st_int, 1);
-            Play1->setStat(st_mdgm, 1);
-            Play1->setStat(st_mp, 1);
-            Play1->setStat(st_pdmg, 1);
-            Play1->setStat(st_res, 1);
-            Play1->setStat(st_speed, 1);
-            Play1->setStat(st_str, 1);
-            Play1->setBonus(st_arm, 1);
-            Play1->setBonus(st_gold, 1);
-            Play1->setBonus(st_hp, 1);
-            Play1->setBonus(st_int, 1);
-            Play1->setBonus(st_mdgm, 1);
-            Play1->setBonus(st_mp, 1);
-            Play1->setBonus(st_pdmg, 1);
-            Play1->setBonus(st_res, 1);
-            Play1->setBonus(st_speed, 1);
-            Play1->setBonus(st_str, 1);
-            break;
-        }
-        case 3:
-        {
-            CChar* Play1 = new CChar(name,"Dwarf");
-            Play1->setStat(st_arm, 1);
-            Play1->setStat(st_gold, 1);
-            Play1->setStat(st_hp, 1);
-            Play1->setStat(st_int, 1);
-            Play1->setStat(st_mdgm, 1);
-            Play1->setStat(st_mp, 1);
-            Play1->setStat(st_pdmg, 1);
-            Play1->setStat(st_res, 1);
-            Play1->setStat(st_speed, 1);
-            Play1->setStat(st_str, 1);
-            Play1->setBonus(st_arm, 1);
-            Play1->setBonus(st_gold, 1);
-            Play1->setBonus(st_hp, 1);
-            Play1->setBonus(st_int, 1);
-            Play1->setBonus(st_mdgm, 1);
-            Play1->setBonus(st_mp, 1);
-            Play1->setBonus(st_pdmg, 1);
-            Play1->setBonus(st_res, 1);
-            Play1->setBonus(st_speed, 1);
-            Play1->setBonus(st_str, 1);
-            break;
-        }
-        case 4:
-        {
-            CChar* Play1 = new CChar(name,"Human");
-            Play1->setStat(st_arm, 1);
-            Play1->setStat(st_gold, 1);
-            Play1->setStat(st_hp, 1);
-            Play1->setStat(st_int, 1);
-            Play1->setStat(st_mdgm, 1);
-            Play1->setStat(st_mp, 1);
-            Play1->setStat(st_pdmg, 1);
-            Play1->setStat(st_res, 1);
-            Play1->setStat(st_speed, 1);
-            Play1->setStat(st_str, 1);
-            Play1->setBonus(st_arm, 1);
-            Play1->setBonus(st_gold, 1);
-            Play1->setBonus(st_hp, 1);
-            Play1->setBonus(st_int, 1);
-            Play1->setBonus(st_mdgm, 1);
-            Play1->setBonus(st_mp, 1);
-            Play1->setBonus(st_pdmg, 1);
-            Play1->setBonus(st_res, 1);
-            Play1->setBonus(st_speed, 1);
-            Play1->setBonus(st_str, 1);
-            break;
-        }
-        case 5:
-        {
-        CChar* Play1 = new CChar(name,"Undead");
-            Play1->setStat(st_arm, 1);
-            Play1->setStat(st_gold, 1);
-            Play1->setStat(st_hp, 1);
-            Play1->setStat(st_int, 1);
-            Play1->setStat(st_mdgm, 1);
-            Play1->setStat(st_mp, 1);
-            Play1->setStat(st_pdmg, 1);
-            Play1->setStat(st_res, 1);
-            Play1->setStat(st_speed, 1);
-            Play1->setStat(st_str, 1);
-            Play1->setBonus(st_arm, 1);
-            Play1->setBonus(st_gold, 1);
-            Play1->setBonus(st_hp, 1);
-            Play1->setBonus(st_int, 1);
-            Play1->setBonus(st_mdgm, 1);
-            Play1->setBonus(st_mp, 1);
-            Play1->setBonus(st_pdmg, 1);
-            Play1->setBonus(st_res, 1);
-            Play1->setBonus(st_speed, 1);
-            Play1->setBonus(st_str, 1);
-            break;
-        }
-        case 6:
-        {
-            CChar* Play1 = new CChar(name,"Goblin");
-            Play1->setStat(st_arm, 1);
-            Play1->setStat(st_gold, 1);
-            Play1->setStat(st_hp, 1);
-            Play1->setStat(st_int, 1);
-            Play1->setStat(st_mdgm, 1);
-            Play1->setStat(st_mp, 1);
-            Play1->setStat(st_pdmg, 1);
-            Play1->setStat(st_res, 1);
-            Play1->setStat(st_speed, 1);
-            Play1->setStat(st_str, 1);
-            Play1->setBonus(st_arm, 1);
-            Play1->setBonus(st_gold, 1);
-            Play1->setBonus(st_hp, 1);
-            Play1->setBonus(st_int, 1);
-            Play1->setBonus(st_mdgm, 1);
-            Play1->setBonus(st_mp, 1);
-            Play1->setBonus(st_pdmg, 1);
-            Play1->setBonus(st_res, 1);
-            Play1->setBonus(st_speed, 1);
-            Play1->setBonus(st_str, 1);
-            break;
-        }
-        case 7:
-        {
-            CChar* Play1 = new CChar(name,"Sauron's son");
-            Play1->setStat(st_arm, 1);
-            Play1->setStat(st_gold, 1);
-            Play1->setStat(st_hp, 1);
-            Play1->setStat(st_int, 1);
-            Play1->setStat(st_mdgm, 1);
-            Play1->setStat(st_mp, 1);
-            Play1->setStat(st_pdmg, 1);
-            Play1->setStat(st_res, 1);
-            Play1->setStat(st_speed, 1);
-            Play1->setStat(st_str, 1);
-            Play1->setBonus(st_arm, 1);
-            Play1->setBonus(st_gold, 1);
-            Play1->setBonus(st_hp, 1);
-            Play1->setBonus(st_int, 1);
-            Play1->setBonus(st_mdgm, 1);
-            Play1->setBonus(st_mp, 1);
-            Play1->setBonus(st_pdmg, 1);
-            Play1->setBonus(st_res, 1);
-            Play1->setBonus(st_speed, 1);
-            Play1->setBonus(st_str, 1);
-            break;
-        }
-        case 8:
-        {
-            CChar* Play1 = new CChar(name,"Ent");
-            Play1->setStat(st_arm, 1);
-            Play1->setStat(st_gold, 1);
-            Play1->setStat(st_hp, 1);
-            Play1->setStat(st_int, 1);
-            Play1->setStat(st_mdgm, 1);
-            Play1->setStat(st_mp, 1);
-            Play1->setStat(st_pdmg, 1);
-            Play1->setStat(st_res, 1);
-            Play1->setStat(st_speed, 1);
-            Play1->setStat(st_str, 1);
-            Play1->setBonus(st_arm, 1);
-            Play1->setBonus(st_gold, 1);
-            Play1->setBonus(st_hp, 1);
-            Play1->setBonus(st_int, 1);
-            Play1->setBonus(st_mdgm, 1);
-            Play1->setBonus(st_mp, 1);
-            Play1->setBonus(st_pdmg, 1);
-            Play1->setBonus(st_res, 1);
-            Play1->setBonus(st_speed, 1);
-            Play1->setBonus(st_str, 1);
-            break;
-        }
-	}
-*/
+	player.show();
+
+
 
 }

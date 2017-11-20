@@ -37,7 +37,7 @@
 
 1507021862 c:\users\student\documents\cpp\game\stale.h
 
-1509971365 source:c:\documents and settings\uczen\pulpit\game-master\main.cpp
+1511180694 source:c:\documents and settings\uczen\pulpit\game-master\main.cpp
 	<iostream>
 	"CChar.h"
 	"CMob.h"
@@ -46,33 +46,35 @@
 	<stdio.h>
 	<fstream>
 	<vector>
+	"CChar.h"
 	"rapidxml.hpp"
 
-1509365611 c:\documents and settings\uczen\pulpit\game-master\include\cchar.h
+1511178739 c:\documents and settings\uczen\pulpit\game-master\include\cchar.h
 	"../stale.h"
 	"CSkill.h"
 	"CObject.h"
 	<string>
 
-1509334152 c:\documents and settings\uczen\pulpit\game-master\stale.h
+1511073370 c:\documents and settings\uczen\pulpit\game-master\stale.h
 
 1509334152 c:\documents and settings\uczen\pulpit\game-master\include\cbonus.h
 	"../stale.h"
 	<string>
 
-1509334152 c:\documents and settings\uczen\pulpit\game-master\include\cskill.h
+1511073370 c:\documents and settings\uczen\pulpit\game-master\include\cskill.h
 	"../stale.h"
+	"CObject.h"
 	<string>
-	"CBonus.h"
 
-1509334152 c:\documents and settings\uczen\pulpit\game-master\include\cstat.h
+1511182326 c:\documents and settings\uczen\pulpit\game-master\include\cstat.h
 	"../stale.h"
 	<string>
+	<stdio.h>
 
 1509334152 source:c:\documents and settings\uczen\pulpit\game-master\src\cbonus.cpp
 	"CBonus.h"
 
-1509363865 source:c:\documents and settings\uczen\pulpit\game-master\src\cchar.cpp
+1511182439 source:c:\documents and settings\uczen\pulpit\game-master\src\cchar.cpp
 	"CChar.h"
 
 1509363865 source:c:\documents and settings\uczen\pulpit\game-master\src\cmobs.cpp
@@ -84,19 +86,18 @@
 	"CSkill.h"
 	<string>
 
-1509334152 source:c:\documents and settings\uczen\pulpit\game-master\src\cskill.cpp
+1511073370 source:c:\documents and settings\uczen\pulpit\game-master\src\cskill.cpp
 	"CSkill.h"
 
-1509334152 source:c:\documents and settings\uczen\pulpit\game-master\src\cstat.cpp
+1511179447 source:c:\documents and settings\uczen\pulpit\game-master\src\cstat.cpp
 	"CStat.h"
 
-1509968658 c:\documents and settings\uczen\pulpit\game-master\include\cobject.h
+1511180407 c:\documents and settings\uczen\pulpit\game-master\include\cobject.h
 	"../stale.h"
 	"CStat.h"
-	"CBonus.h"
 	<iostream>
 
-1509334152 source:c:\documents and settings\uczen\pulpit\game-master\src\cobject.cpp
+1511179982 source:c:\documents and settings\uczen\pulpit\game-master\src\cobject.cpp
 	"CObject.h"
 
 1509363865 source:c:\documents and settings\uczen\pulpit\game-master\src\citems.cpp
@@ -107,21 +108,21 @@
 	"../stale.h"
 	"CObject.h"
 
-1509364313 c:\documents and settings\uczen\pulpit\game-master\include\cmob.h
+1511073370 c:\documents and settings\uczen\pulpit\game-master\include\cmob.h
 	"../stale.h"
 	"CObject.h"
 	"CSkill.h"
 	<string>
 
-1509364313 c:\documents and settings\uczen\pulpit\game-master\include\citem.h
+1511073370 c:\documents and settings\uczen\pulpit\game-master\include\citem.h
 	<string>
 	"../stale.h"
 	"CObject.h"
 
-1509364313 source:c:\documents and settings\uczen\pulpit\game-master\src\citem.cpp
+1511073370 source:c:\documents and settings\uczen\pulpit\game-master\src\citem.cpp
 	"CItem.h"
 
-1509364313 source:c:\documents and settings\uczen\pulpit\game-master\src\cmob.cpp
+1511073370 source:c:\documents and settings\uczen\pulpit\game-master\src\cmob.cpp
 	"CMob.h"
 
 1242171978 c:\documents and settings\uczen\pulpit\game-master\rapidxml-1.13\rapidxml.hpp
@@ -130,7 +131,7 @@
 	<new>
 	<exception>
 
-1242171978 c:\documents and settings\uczen\pulpit\game-master\include\rapidxml.hpp
+1511073370 c:\documents and settings\uczen\pulpit\game-master\include\rapidxml.hpp
 	<cstdlib>
 	<cassert>
 	<new>

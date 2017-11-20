@@ -24,10 +24,10 @@ void CChar::show()
     cout<<"Name: "<<m_name<<endl;
     cout<<"Race: "<<m_type<<endl;
     cout<<"-----------------------------------------------------------"<<endl;
-    cout << "Aramor: "<<m_stats[st_arm].getValue()<<"\t\t"<< "Res: "<<m_stats[st_res].getValue()<<endl;
-    cout << "Helth points: "<<m_stats[st_hp].getValue()<<"\t"<< "Mana points: "<<m_stats[st_mp].getValue()<<endl;
-    cout << "Strength: "<<m_stats[st_str].getValue()<<"\t\t"<< "Inteligence: "<<m_stats[st_int].getValue()<<endl;
-    cout << "Phisical dmg: "<<m_stats[st_pdmg].getValue()<<"\t"<< "Magical dmg: "<<m_stats[st_mdgm].getValue()<<endl;
-    cout << "Gold: "<<m_stats[st_gold].getValue()<<"\t\t"<< "Speed: "<<m_stats[st_speed].getValue()<<endl<<endl;
+    cout << "Aramor: "<<m_stats[st_arm].show()<<"\t\t"<< "Res: "<<m_stats[st_res].show()<<endl;
+    cout << "Helth points: "<<m_stats[st_hp].show()<<" \t"<< "Mana points: "<<m_stats[st_mp].show()<<endl;
+    cout << "Strength: "<<m_stats[st_str].show()<<"\t\t"<< "Inteligence: "<<m_stats[st_int].show()<<endl;
+    cout << "Phisical dmg: "<<m_stats[st_pdmg].show()<<"\t\t"<< "Magical dmg: "<<m_stats[st_mdgm].show()<<endl;
+    cout << "Gold: "<<m_stats[st_gold].show()<<"\t\t"<< "Speed: "<<m_stats[st_speed].show()<<endl<<endl;
 
 }

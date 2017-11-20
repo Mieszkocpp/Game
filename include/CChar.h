@@ -19,6 +19,8 @@ protected:
     */
 public:
     void show();
+    unsigned long getExp()          {return m_exp;}
+    int setExp(unsigned long exp)   {m_exp = exp; return 0;}
 
 
     CChar() {}

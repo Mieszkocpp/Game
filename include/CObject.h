@@ -28,14 +28,18 @@ public:
     string getType()        {return m_type;}
 
     ///SET
-    int setStat(ST stat, long newVal)       {m_stats[stat].setValue(newVal);     return 0;}
+    int setStat(ST stat, CStat arg)
+    {
+        m_stats[stat]=arg;
+        return 0;
+    }
     int setBonus(ST stat, double newVal)    {m_bonuses[stat].setValue(newVal);   return 0;}
     int setId(long id)                      {m_id=id;       return 0;}
     int setName(string name)                {m_name = name; return 0;}
     int setType(string type)                {m_type = type; return 0;}
 
     ///TMP
-    void show()
+    virtual void show()
     {
         cout<<m_name<<" "<<m_type<<endl;
         cout<<"Strength: "<<m_stats[st_str].getValue()<<" "<<m_bonuses[st_str].getValue()<<endl;

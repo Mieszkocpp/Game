@@ -9,6 +9,8 @@ using namespace std;
 
 class CSkill : public CObject
 {
+protected:
+    int     m_ttl;
 public:
     CSkill();
     virtual ~CSkill();

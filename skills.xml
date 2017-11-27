@@ -1,14 +1,21 @@
 <skills>
-	<skill id="0" name="speed" level="1">
-		<speed value="2" />
+	<skill id="0" name="speed">
+		<level value="1">
+			<speed value="2" multi="1"/>
+		</level>
+		<level value="2">
+			<speed value="2" multi="1.5"/>
+		</level>
+		<level value="3">
+			<speed value="3" multi="1.5"/>
+			<int multi="1.5"/>
+			<str multi="1.5"/>
+		</level>
 	</skill>
-	<skill id="1" name="speed" level="2">
-		<speed value="4" />
-	</skill>
-	<skill id="15" name="health" level="1">
-		<speed value="2" />
-	</skill>
-	<skill id="16" name="health" level="2">
-		<speed value="4" />
+	
+	
+	
+	<skill>
+	
 	</skill>
 </skills>

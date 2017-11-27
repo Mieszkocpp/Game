@@ -1,4 +1,4 @@
-<char>
+<chars>
 	<class name="Ork" id="1">
 		<arm value="5" multi="1.5"/>
 		<gold value="250" />
@@ -95,4 +95,4 @@
 		<speed value="2" />
 		<str value="250" />
 	</class>
-</char>
+</chars>

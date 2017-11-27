@@ -35,6 +35,11 @@ public:
 public:
 
     CStat();
+    CStat(long value, double mulit)
+    {
+        m_multi = mulit;
+        m_value = value;
+    }
     virtual ~CStat();
 };
 

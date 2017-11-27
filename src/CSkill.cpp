@@ -2,7 +2,7 @@
 
 CSkill::CSkill()
 {
-
+    m_ttl = 1;
 }
 
 CSkill::~CSkill()

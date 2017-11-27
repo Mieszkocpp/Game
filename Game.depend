@@ -425,3 +425,76 @@
 1511093480 source:c:\users\parys\desktop\game-kopia\src\cstat.cpp
 	"CStat.h"
 
+1511786040 source:c:\users\student\desktop\game-master\src\cchar.cpp
+	"CChar.h"
+
+1511785116 c:\users\student\desktop\game-master\include\cchar.h
+	"../stale.h"
+	"CSkill.h"
+	"CObject.h"
+	<string>
+
+1511782177 c:\users\student\desktop\game-master\stale.h
+
+1511782725 c:\users\student\desktop\game-master\include\cskill.h
+	"../stale.h"
+	"CObject.h"
+	<string>
+
+1511785047 c:\users\student\desktop\game-master\include\cobject.h
+	"../stale.h"
+	"CStat.h"
+	<iostream>
+	<map>
+
+1511783477 c:\users\student\desktop\game-master\include\cstat.h
+	"../stale.h"
+	<string>
+	<stdio.h>
+
+1511782178 source:c:\users\student\desktop\game-master\src\cstat.cpp
+	"CStat.h"
+
+1511782178 source:c:\users\student\desktop\game-master\src\citem.cpp
+	"CItem.h"
+
+1511782178 c:\users\student\desktop\game-master\include\citem.h
+	<string>
+	"../stale.h"
+	"CObject.h"
+
+1511782178 source:c:\users\student\desktop\game-master\src\cmob.cpp
+	"CMob.h"
+
+1511782178 c:\users\student\desktop\game-master\include\cmob.h
+	"../stale.h"
+	"CObject.h"
+	"CSkill.h"
+	<string>
+
+1511782178 source:c:\users\student\desktop\game-master\src\cobject.cpp
+	"CObject.h"
+
+1511782744 source:c:\users\student\desktop\game-master\src\cskill.cpp
+	"CSkill.h"
+
+1511786500 source:c:\users\student\desktop\game-master\main.cpp
+	<iostream>
+	"CChar.h"
+	"CMob.h"
+	"CItem.h"
+	<string.h>
+	<stdio.h>
+	<fstream>
+	<vector>
+	"CChar.h"
+	"rapidxml.hpp"
+	<iostream>
+	<map>
+
+1511782178 c:\users\student\desktop\game-master\include\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+

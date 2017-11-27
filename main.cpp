@@ -15,26 +15,17 @@
 #include "CChar.h"
 #include "rapidxml.hpp"
 
+#include <iostream>
+#include <map>
+
 using namespace rapidxml;
 using namespace std;
 
 
-CStat getXMLValue(xml_node<> *nodeName, string subNode)
-{
-    CStat ret;
-    if(nodeName)
-    {
-            xml_node<> *node = nodeName->first_node(subNode.c_str());
-            if(node && node->first_attribute("value"))
-                ret.setValue(atol(node->first_attribute("value")->value()));
-            if(node && node->first_attribute("multi"))
-                ret.setMulti(atof(node->first_attribute("multi")->value()));
-     }
-    return ret;
-}
-
 int main(void)
 {
+
+
 ///loading data
 
     CChar races[100]; ///?????
@@ -46,24 +37,28 @@ int main(void)
     ifstream klasyXML ("klasy.xml");
     vector<char> buffer((istreambuf_iterator<char>(klasyXML)), istreambuf_iterator<char>());
 	buffer.push_back('\0');
+
+
 	doc.parse<0>(&buffer[0]);
-	root = doc.first_node("char");
+
+	root = doc.first_node("chars");
+
 	int i=0;
 	for (xml_node<> * klasa = root->first_node("class"); klasa; klasa = klasa->next_sibling(),++i)
 	{
+	    races[i].setType(klasa->first_attribute("name")->value());
+	    for (xml_node<> *node = klasa->first_node(); node; node = node->next_sibling())
+        {
+            CStat ret;
+            if(node && node->first_attribute("value"))
+                ret.setValue(atol(node->first_attribute("value")->value()));
+            if(node && node->first_attribute("multi"))
+                ret.setMulti(atof(node->first_attribute("multi")->value()));
+            races[i].setStat(node->name(),ret);
+        }
 
-        races[i].setType(klasa->first_attribute("name")->value());
-        races[i].setStat(st_str,getXMLValue(klasa,"str"));
-        races[i].setStat(st_int,getXMLValue(klasa,"int"));
-        races[i].setStat(st_hp,getXMLValue(klasa,"hp"));
-        races[i].setStat(st_mp,getXMLValue(klasa,"mp"));
-        races[i].setStat(st_arm,getXMLValue(klasa,"arm"));
-        races[i].setStat(st_res,getXMLValue(klasa,"res"));
-        races[i].setStat(st_mdgm,getXMLValue(klasa,"mdmg"));
-        races[i].setStat(st_pdmg,getXMLValue(klasa,"pdmg"));
-        races[i].setStat(st_speed,getXMLValue(klasa,"speed"));
-        races[i].setStat(st_gold,getXMLValue(klasa,"gold"));
         races[i].show();
+
 	}
 
     int race;
@@ -74,7 +69,7 @@ int main(void)
 	cin>>name;
 	do
     {
-        cout<<"Choose race: [0-5]";
+        cout<<"Choose race: [0-5] ";
         cin>>race;
     }
 	while(race < 0 || race > 5);
@@ -83,7 +78,6 @@ int main(void)
 	player.setName(name);
 
 	player.show();
-
 
 
 }
